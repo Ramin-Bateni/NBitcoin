@@ -1836,6 +1836,17 @@ namespace NBitcoin.Tests
 		{
 			return new uint256(RandomUtils.GetBytes(32));
 		}
+		
+		//------------------RAMIN--------------------------
+		//TODO »  RAMIN » باید محتوای این تست چک شود
+		[Fact]
+		[Trait("UnitTest", "UnitTest")]
+		public void CanParseLTubCounosCash()
+		{
+			new BitcoinExtKey("Ltpv71G8qDifUiNesyXJM9i5RzRB5HHFWfjseAX7mXY6vim2BHMBHgZJi9poW2J5FveLFg4PnPXf6y2VLtYoTDxJAhbVRRpo3GeKKx1wveysYnw", NBitcoin.Altcoins.CounosCash.Instance.Mainnet);
+			new BitcoinExtPubKey("Ltub2SSUS19CirucVaJxxH11bYDCEmze824yTDJCzRg5fDNN3oBWussWgRA7Zyiya98dAErcvDsw7rAuuZuZug3Ve6iT5uVkwPAKwQphBiQdjNd", NBitcoin.Altcoins.CounosCash.Instance.Mainnet);
+		}
+		//------------------/RAMIN--------------------------
 
 		[Fact]
 		[Trait("UnitTest", "UnitTest")]

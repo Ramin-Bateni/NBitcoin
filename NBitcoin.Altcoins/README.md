@@ -11,6 +11,7 @@ Currently supported altcoins are:
 * Feathercoin
 * Groestlcoin
 * Litecoin
+* CounosCash
 * Monacoin
 * Polis
 * UFO
@@ -20,13 +21,13 @@ Currently supported altcoins are:
 ## How to use?
 
 This package expose altcoin's `Network` class.
-For example if you want to use Litecoin testnet:
+For example if you want to use CounosCash testnet:
 
 ```
-Network network = NBitcoin.Altcoins.Litecoin.Instance.Testnet;
+Network network = NBitcoin.Altcoins.CounosCash.Instance.Testnet;
 ```
 
-You can then use this fork generating a Litecoin address for example:
+You can then use this fork generating a CounosCash address for example:
 
 ```
 Console.WriteLine(new Key().PubKey.GetAddress(network));
@@ -34,7 +35,7 @@ Console.WriteLine(new Key().PubKey.GetAddress(network));
 
 ## How to support my own altcoin?
 
-Follow Litecoin example and make a pull request.
+Follow CounosCash example and make a pull request.
 
 NBitcoin developers do not test those PRs, so you are responsible to keep it working.
 
@@ -47,7 +48,7 @@ Then, change [NodeBuilderEx](../NBitcoin.Tests/NodeBuilderEx.cs) like the follow
 ```
 public static NodeBuilder Create([CallerMemberName] string caller = null)
 {
-	return NodeBuilder.Create(NodeDownloadData.Litecoin.v0_15_1, Altcoins.AltNetworkSets.Litecoin.Regtest, caller);
+	return NodeBuilder.Create(NodeDownloadData.CounosCash.v0_15_1, Altcoins.AltNetworkSets.CounosCash.Regtest, caller);
 }
 ```
 

@@ -502,6 +502,24 @@ namespace NBitcoin
 			}
 		}
 
+		//------------------RAMIN--------------------------
+		bool _CounosCashWorkCalculation;
+		/// <summary>
+		/// Specify using CounosCash calculation for difficulty
+		/// </summary>
+		public bool CounosCashWorkCalculation
+		{
+			get
+			{
+				return _CounosCashWorkCalculation;
+			}
+			set
+			{
+				EnsureNotFrozen();
+				_CounosCashWorkCalculation = value;
+			}
+		}
+		//------------------/RAMIN--------------------------
 
 		bool _LitecoinWorkCalculation;
 		/// <summary>
@@ -575,6 +593,9 @@ namespace NBitcoin
 			consensus._ConsensusFactory = _ConsensusFactory;
 			consensus._LitecoinWorkCalculation = _LitecoinWorkCalculation;
 			consensus._SupportSegwit = _SupportSegwit;
+			//------------------RAMIN--------------------------
+			consensus._CounosCashWorkCalculation = _CounosCashWorkCalculation;
+			//------------------/RAMIN-------------------------
 		}
 	}
 	public partial class Network

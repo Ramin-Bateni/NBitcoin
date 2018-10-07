@@ -114,6 +114,36 @@ namespace NBitcoin.Tests
 				}
 			};
 		}
+		
+		//------------------RAMIN--------------------------
+		public class CounosCashNodeDownloadData
+		{
+			public NodeDownloadData v0_0_1 = new NodeDownloadData()
+			{
+				Version = "0.0.1",
+				Windows = new NodeOSDownloadData()
+				{
+					DownloadLink = "https://download.CounosCash.org/CounosCash-{0}/win/CounosCash-{0}-win64.zip",
+					Archive = "CounosCash-{0}-win64.zip",
+					Executable = "CounosCash-{0}/bin/counoscashd.exe",
+					Hash = "c47b196a45f64dbfc9d13b66b50d4da82a263d95b36577e64b31c37590f718b2"
+				},
+				Linux = new NodeOSDownloadData()
+				{
+					DownloadLink = "https://download.CounosCash.org/CounosCash-{0}/linux/CounosCash-{0}-x86_64-linux-gnu.tar.gz",
+					Archive = "CounosCash-{0}-x86_64-linux-gnu.tar.gz",
+					Executable = "CounosCash-{0}/bin/counoscashd",
+					Hash = "05f409ee57ce83124f2463a3277dc8d46fca18637052d1021130e4deaca07b3c"
+				},
+				Mac = new NodeOSDownloadData()
+				{
+					DownloadLink = "https://download.CounosCash.org/CounosCash-{0}/osx/CounosCash-{0}-osx64.tar.gz",
+					Archive = "CounosCash-{0}-osx64.tar.gz",
+					Executable = "CounosCash-{0}/bin/counoscashd"
+				}
+			};
+		}
+		//------------------/RAMIN--------------------------
 
 		public class ViacoinNodeDownloadData
 		{
@@ -541,7 +571,14 @@ namespace NBitcoin.Tests
 		{
 			get; set;
 		} = new LitecoinNodeDownloadData();
-
+		
+		//------------------RAMIN--------------------------
+		public static CounosCashNodeDownloadData CounosCash
+		{
+			get; set;
+		} = new CounosCashNodeDownloadData();
+		//------------------/RAMIN--------------------------
+		
 		public static ViacoinNodeDownloadData Viacoin
 		{
 			get; set;

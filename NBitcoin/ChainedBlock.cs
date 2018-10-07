@@ -382,7 +382,9 @@ namespace NBitcoin
 			}
 
 			long pastHeight = 0;
-			if(consensus.LitecoinWorkCalculation)
+			// RAMIN : به شرط زیر کونوس کش را هم اضافه کردم
+			// TODO:	باید چک کنم که آیا در شرط زیر کونوس کش باشد یا نه و چرا؟
+			if(consensus.LitecoinWorkCalculation || )
 			{
 				long blockstogoback = consensus.DifficultyAdjustmentInterval - 1;
 				if((pindexLast.Height + 1) != consensus.DifficultyAdjustmentInterval)
